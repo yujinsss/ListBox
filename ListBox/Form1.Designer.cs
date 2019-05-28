@@ -42,6 +42,7 @@
             this.lbView.Name = "lbView";
             this.lbView.Size = new System.Drawing.Size(214, 172);
             this.lbView.TabIndex = 0;
+            this.lbView.SelectedIndexChanged += new System.EventHandler(this.LbView_SelectedIndexChanged);
             // 
             // lblResult
             // 
@@ -58,21 +59,23 @@
             this.txtList.Name = "txtList";
             this.txtList.Size = new System.Drawing.Size(213, 21);
             this.txtList.TabIndex = 2;
+            this.txtList.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtList_KeyPress);
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(13, 236);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(213, 127);
+            this.btnAdd.Size = new System.Drawing.Size(213, 33);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(238, 380);
+            this.ClientSize = new System.Drawing.Size(238, 284);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtList);
             this.Controls.Add(this.lblResult);
@@ -81,6 +84,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "리스트 추가";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
